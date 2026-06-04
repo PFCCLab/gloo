@@ -320,8 +320,7 @@ inline float cpu_half2float(float16 h) {
 
   unsigned temp = ((sign << 31) | (exponent << 23) | mantissa);
 
-  void* rp = &temp;
-  return *(float*)rp;
+  return (float)temp;
 }
 
 } // namespace gloo
